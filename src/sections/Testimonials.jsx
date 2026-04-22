@@ -16,7 +16,7 @@ function TestimonialCard({ name, role, text, index }) {
     >
       <div className="flex gap-1 mb-5">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} size={16} fill="white" stroke="white" />
+          <Star key={i} size={16} fill="#F6D336" stroke="#F6D336" />
         ))}
       </div>
 

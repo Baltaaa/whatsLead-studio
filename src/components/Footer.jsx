@@ -9,12 +9,16 @@ function Footer() {
         <div className="grid md:grid-cols-3 gap-10">
 
           {/* Brand */}
-          <div>
+          <div className="flex flex-col gap-4 my-0 py-0">
             <Logo />
 
-            <p className="mt-4 text-zinc-500 max-w-sm leading-relaxed">
+            <p className=" text-zinc-500 max-w-sm leading-relaxed">
               Landing pages modernas diseñadas para generar clientes reales.
             </p>
+
+            <h3 className="mt-4 text-white/80 max-w-sm uppercase font-normal tracking-wide font-mono">
+              Mar del Plata, Argentina
+            </h3>
           </div>
 
           {/* Links */}
@@ -25,20 +29,41 @@ function Footer() {
               <a href="#servicios" className="hover:text-white transition">
                 Servicios
               </a>
+              <a href="#pricing" className="hover:text-white transition">
+                Precios
+              </a>
+              
+              <a href="#testimonios" className="hover:text-white transition">
+                Testimonios
+              </a>
 
               <a href="#contacto" className="hover:text-white transition">
                 Contacto
               </a>
 
-              <a href="#pricing" className="hover:text-white transition">
-                Precios
-              </a>
             </div>
           </div>
 
-          {/* Contact */}
-         {/* <div>
-            <h4 className="font-semibold mb-4">Conectemos</h4>
+
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4">Legal</h4>
+
+            <div className="flex flex-col gap-3 text-zinc-400">
+              <a href="#terms" className="hover:text-white transition">
+                Terminos y Condiciones
+              </a>
+
+              <a href="#policy" className="hover:text-white transition">
+                Politica de Privacidad 
+              </a>
+
+            </div>
+          </div>
+
+          {/* <div>
+            <h4 className="font-semibold mb-4">Redes</h4>
 
             <div className="flex gap-4">
 
@@ -66,10 +91,10 @@ function Footer() {
             </div>
           </div> */}
 
-        </div> 
+        </div>
 
         <div className="mt-12 pt-8 border-t border-white/5 text-sm text-zinc-600 flex flex-col md:flex-row gap-3 justify-between">
-          <p>© 2026 WhatsLead Studio</p>
+          <p>© 2026 WhatsLead Studio. Todos los derechos reservados.</p>
           <p>Diseñado para vender más.</p>
         </div>
 

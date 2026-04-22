@@ -21,7 +21,7 @@ function Plan({ name, price, featured, items, index }) {
       }`}
     >
       {featured && (
-        <div className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-widest">
+        <div className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-widest bg-[#75757E]/30 opacity-90 py-1 px-5 rounded-2xl">
           Popular
         </div>
       )}
