@@ -40,7 +40,7 @@ function Contact() {
                                     </p>
 
                                     <h3 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-white mb-6">
-                                        Empezamos hoy, vendemos mañana.
+                                        Empezamos hoy, <b className="font-extrabold">vendemos mañana. </b>
                                     </h3>
 
                                     <p className="text-lg text-zinc-400 max-w-xl leading-relaxed">

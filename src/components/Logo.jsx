@@ -7,7 +7,7 @@ function Logo({ small = false }) {
 
 
         {/* Icon */}
-        <FaroIcon size={100} color="white" />
+        <FaroIcon size={50} color="white" />
   
         {/* Text */}
         <div className="leading-none">

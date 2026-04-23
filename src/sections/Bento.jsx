@@ -118,7 +118,7 @@ function Bento() {
             Todo pensado para vender más.
           </h2>
           <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            No hacemos sitios bonitos. Hacemos landings que convierten visitantes en clientes reales.
+            No solo hacemos sitios bonitos. Hacemos landings que convierten visitantes en clientes reales.
           </p>
         </motion.div>
 
@@ -143,7 +143,7 @@ function Bento() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-16 grid md:grid-cols-3 gap-8 p-8 rounded-2xl border border-white/10 bg-zinc-900/50"
+          className="mt-16 grid md:grid-cols-3 gap-8 p-8 rounded-2xl border border-[#6fffe9]/80 bg-zinc-900/50"
         >
           <div>
             <p className="text-4xl font-bold text-white mb-2">30+</p>

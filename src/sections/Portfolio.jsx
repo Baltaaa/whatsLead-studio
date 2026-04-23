@@ -102,9 +102,8 @@ function PortfolioCard({ item, index }) {
           <img
             src={item.image}
             alt={item.title}
-            className={`w-full h-full object-cover transition-transform duration-500 ${
-              isHovered ? 'scale-105' : 'scale-100'
-            }`}
+            className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'scale-105' : 'scale-100'
+              }`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
@@ -189,9 +188,9 @@ function Portfolio() {
           <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto">
             Empresas de todos los rubros confían en nosotros para crear sus landings de alto rendimiento.
           </p>
-          <button className="px-8 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition-transform">
+          <a href="#contacto" className="px-8 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition-transform">
             Comenzar Mi Landing
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

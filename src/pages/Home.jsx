@@ -7,6 +7,7 @@ import Testimonials from '../sections/Testimonials'
 import Pricing from '../sections/Pricing'
 import Footer from '../components/Footer'
 import Loader from '../components/Loader'
+import Onboarding from '../sections/Onboarding'
 
 function Home() {
   return (
@@ -30,6 +31,7 @@ function Home() {
       <Bento />
       <Portfolio />
       <Pricing />
+      <Onboarding />
       <Testimonials />
       <Contact />
       <Footer />

@@ -24,7 +24,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-5"
           >
-            WhatsLeadStudio - Black Luxury Minimal
+            WhatsLead Studio
           </motion.p>
 
           <motion.h2 
@@ -33,7 +33,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white"
           >
-            Landings que venden. Ya.
+            Landings que venden. <b className="text-[#6fffe9] font-extrabold">Ya.</b>
           </motion.h2>
 
           <motion.p 
@@ -42,7 +42,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-7 text-zinc-400 text-lg max-w-xl leading-relaxed"
           >
-            No vendemos diseño bonito. Vendemos resultados. Landings optimizadas para convertir visitantes en clientes reales en 48-72 horas.
+            No vendemos solo un diseño bonito. Vendemos resultados. Landings optimizadas para convertir visitantes en clientes reales en 48-72 horas.
           </motion.p>
 
           {/* Trust Signals Row */}
