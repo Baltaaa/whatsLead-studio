@@ -97,9 +97,9 @@ function PortfolioCard({ item, index }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/50 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
+      <div className="rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden border border-white/10 bg-zinc-900/50 hover:border-white/30 transition-all duration-300 h-full flex flex-col">
         {/* Image Container */}
-        <div className="relative overflow-hidden h-48 bg-zinc-800">
+        <div className="relative overflow-hidden h-32 sm:h-40 md:h-48 bg-zinc-800">
           <img
             src={item.image}
             alt={item.title}
@@ -110,33 +110,33 @@ function PortfolioCard({ item, index }) {
         </div>
 
         {/* Content */}
-        <div className="flex-1 flex flex-col p-6 justify-between">
+        <div className="flex-1 flex flex-col p-3 sm:p-4 md:p-6 justify-between">
           {/* Title and Category */}
           <div>
-            <p className="text-xs uppercase tracking-widest text-zinc-400 mb-2">
+            <p className="text-xs uppercase tracking-widest text-zinc-400 mb-1 sm:mb-2">
               {item.category}
             </p>
-            <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-            <p className="text-sm text-zinc-400 mb-4">{item.description}</p>
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">{item.title}</h3>
+            <p className="text-xs sm:text-sm text-zinc-400 mb-2 sm:mb-4">{item.description}</p>
           </div>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-3 gap-2 mb-4 py-4 border-t border-white/5">
+          <div className="grid grid-cols-3 gap-1 sm:gap-2 mb-3 sm:mb-4 py-2 sm:py-4 border-t border-white/5">
             {item.metrics.map((metric, idx) => (
               <div key={idx} className="text-center">
-                <p className="text-xs text-zinc-500 mb-1">{metric.label}</p>
-                <p className="text-sm font-bold text-white">{metric.value}</p>
+                <p className="text-xs text-zinc-500 mb-0.5 sm:mb-1 line-clamp-1">{metric.label}</p>
+                <p className="text-xs sm:text-sm font-bold text-white">{metric.value}</p>
               </div>
             ))}
           </div>
 
           {/* Result Badge and CTA */}
-          <div className="flex items-center justify-between pt-4 border-t border-white/5">
-            <div className="px-3 py-1 rounded-full bg-white/10 border border-white/20">
-              <p className="text-xs font-semibold text-white">{item.results}</p>
+          <div className="flex items-center justify-between pt-2 sm:pt-4 border-t border-white/5 gap-2">
+            <div className="px-2 sm:px-3 py-1 rounded-full bg-white/10 border border-white/20">
+              <p className="text-xs font-semibold text-white whitespace-nowrap">{item.results}</p>
             </div>
-            <button className="p-2 rounded-lg hover:bg-white/10 transition-colors">
-              <ArrowRight size={18} className="text-zinc-400 group-hover:text-white transition-colors" />
+            <button className="p-1.5 sm:p-2 rounded-lg hover:bg-white/10 transition-colors flex-shrink-0">
+              <ArrowRight size={16} className="text-zinc-400 group-hover:text-white transition-colors" />
             </button>
           </div>
         </div>
@@ -147,7 +147,7 @@ function PortfolioCard({ item, index }) {
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 px-5 md:px-10">
+    <section id="portfolio" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -155,21 +155,21 @@ function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 sm:mb-12 md:mb-16"
         >
-          <p className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-4">
+          <p className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-2 sm:mb-4">
             Casos de Éxito
           </p>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-white mb-4 sm:mb-6">
             Landings que Venden.
           </h2>
-          <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-zinc-400 max-w-2xl leading-relaxed">
             Proyectos reales de empresas argentinas que transformaron su presencia digital y aumentaron sus conversiones significativamente.
           </p>
         </motion.div>
 
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {portfolioItems.map((item, index) => (
             <PortfolioCard key={item.id} item={item} index={index} />
           ))}
@@ -181,12 +181,12 @@ function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 rounded-2xl border border-white/10 bg-gradient-to-r from-zinc-900 to-black p-8 md:p-12 text-center"
+          className="mt-10 sm:mt-12 md:mt-16 rounded-lg sm:rounded-xl md:rounded-2xl border border-white/10 bg-gradient-to-r from-zinc-900 to-black p-6 sm:p-8 md:p-12 text-center"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             ¿Tu proyecto será el próximo caso de éxito?
           </h3>
-          <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-zinc-400 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Empresas de todos los rubros confían en nosotros para crear sus landings de alto rendimiento.
           </p>
           <a href="#contacto" className="px-8 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition-transform">

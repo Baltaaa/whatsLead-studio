@@ -25,28 +25,28 @@ function Card({ icon, title, text, metric, className = "", index }) {
         duration: 0.4,
         delay: index * 0.1
       }}
-      className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-black p-8 hover:border-white/30 transition-all duration-300 ${className}`}
+      className={`group relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-900/80 to-black p-4 sm:p-6 md:p-8 hover:border-white/30 transition-all duration-300 ${className}`}
     >
       {/* Glow effect */}
       <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative z-10 h-full flex flex-col justify-between">
         {/* Icon */}
-        <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6 group-hover:bg-white/10 group-hover:scale-110 transition-all duration-300">
+        <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-4 sm:mb-6 group-hover:bg-white/10 group-hover:scale-110 transition-all duration-300">
           {icon}
         </div>
 
         {/* Title and Description */}
         <div className="flex-1">
-          <h4 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">{title}</h4>
-          <p className="text-base text-zinc-400 leading-relaxed">{text}</p>
+          <h4 className="text-lg sm:text-2xl md:text-3xl font-bold tracking-tight text-white mb-2 sm:mb-3">{title}</h4>
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">{text}</p>
         </div>
 
         {/* Metric if provided */}
         {metric && (
-          <div className="mt-6 pt-6 border-t border-white/10">
-            <p className="text-xs text-zinc-500 mb-2">Resultado promedio</p>
-            <p className="text-2xl font-bold text-white">{metric}</p>
+          <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
+            <p className="text-xs text-zinc-500 mb-1 sm:mb-2">Resultado promedio</p>
+            <p className="text-xl sm:text-2xl font-bold text-white">{metric}</p>
           </div>
         )}
       </div>
@@ -101,7 +101,7 @@ function Bento() {
   ]
 
   return (
-    <section id="servicios" className="py-24 px-5 md:px-10">
+    <section id="servicios" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -109,21 +109,21 @@ function Bento() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-10 sm:mb-12 md:mb-16"
         >
-          <p className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-4">
+          <p className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-2 sm:mb-4">
             Por qué Elegir WhatsLeadStudio
           </p>
-          <h2 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 sm:mb-6">
             Todo pensado para vender más.
           </h2>
-          <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-zinc-400 max-w-2xl leading-relaxed">
             No solo hacemos sitios bonitos. Hacemos landings que convierten visitantes en clientes reales.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6 auto-rows-auto">
           {services.map((service, index) => (
             <div key={index} className={service.span}>
               <Card
@@ -143,19 +143,19 @@ function Bento() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-16 grid md:grid-cols-3 gap-8 p-8 rounded-2xl border border-[#6fffe9]/40 bg-zinc-900/50"
+          className="mt-10 sm:mt-12 md:mt-16 grid sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-2xl border border-[#6fffe9]/80 bg-zinc-900/50"
         >
           <div>
-            <p className="text-4xl font-bold text-white mb-2">30+</p>
-            <p className="text-zinc-400">Landings creadas para empresas</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">30+</p>
+            <p className="text-xs sm:text-sm md:text-base text-zinc-400">Landings creadas para empresas</p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-white mb-2">$20M+</p>
-            <p className="text-zinc-400">En ventas generadas para clientes</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">$20M+</p>
+            <p className="text-xs sm:text-sm md:text-base text-zinc-400">En ventas generadas para clientes</p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-white mb-2">94%</p>
-            <p className="text-zinc-400">Tasa de satisfacción de clientes</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">94%</p>
+            <p className="text-xs sm:text-sm md:text-base text-zinc-400">Tasa de satisfacción de clientes</p>
           </div>
         </motion.div>
       </div>

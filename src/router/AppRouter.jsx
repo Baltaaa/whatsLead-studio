@@ -11,9 +11,9 @@ function AppRouter() {
         <Route path='/' element={<Home />} />
 
          {/* DEMOS */}
-         <Route path="/demos/beauty" element={<BeautyDemo />} />
-        <Route path="/demos/dental" element={<DentalDemo />} />
-        <Route path="/demos/legal" element={<LegalDemo />} />
+         <Route path="/demo/beauty" element={<BeautyDemo />} />
+        <Route path="/demo/dental" element={<DentalDemo />} />
+        <Route path="/demo/legal" element={<LegalDemo />} />
 
       </Routes>
     </BrowserRouter>

@@ -34,70 +34,70 @@ function LegalDemo() {
     <div className="bg-white text-slate-900">
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-amber-600/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
-          <p className="text-xl font-serif font-bold text-amber-800">LEXIS</p>
-          <a href="https://wa.me/542236690101" className="px-6 py-2 bg-amber-700 text-white rounded-sm font-medium text-sm hover:bg-amber-800 transition">
-            Consulta gratis
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-4 sm:py-5 flex justify-between items-center">
+          <p className="text-lg sm:text-xl font-serif font-bold text-amber-800">LEXIS</p>
+          <a href="https://wa.me/542236690101" className="px-4 sm:px-6 py-2 bg-amber-700 text-white rounded-sm font-medium text-xs sm:text-sm hover:bg-amber-800 transition">
+            Consulta
           </a>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="px-6 md:px-10 py-32 max-w-7xl mx-auto border-b border-amber-100">
-        <div className="grid md:grid-cols-2 gap-24 items-center">
+      <section className="px-4 sm:px-6 md:px-10 py-16 sm:py-24 md:py-32 max-w-7xl mx-auto border-b border-amber-100">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-24 items-center">
           <div>
-            <p className="text-sm tracking-[0.2em] text-amber-700 mb-8 font-semibold uppercase">Estudio Jurídico Corporativo</p>
-            <h1 className="text-7xl md:text-8xl font-serif font-black leading-tight mb-8">
+            <p className="text-xs sm:text-sm tracking-[0.2em] text-amber-700 mb-4 sm:mb-8 font-semibold uppercase">Estudio Jurídico Corporativo</p>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-black leading-tight mb-6 sm:mb-8">
               Defensa estratégica.
             </h1>
-            <p className="text-lg text-slate-600 mb-12 leading-relaxed font-light max-w-lg">
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 mb-8 sm:mb-12 leading-relaxed font-light max-w-lg">
               14 años asesorando empresas y particulares en derecho civil, empresarial, laboral y penal con estrategia clara y resultados concretos.
             </p>
-            <a href="https://wa.me/542236690101" className="inline-flex px-8 py-3 bg-amber-700 text-white hover:bg-amber-800 transition font-semibold">
+            <a href="https://wa.me/542236690101" className="inline-flex px-6 sm:px-8 py-2.5 sm:py-3 bg-amber-700 text-white hover:bg-amber-800 transition font-semibold text-sm sm:text-base">
               Agendar consulta <ArrowRight className="ml-2" size={18} />
             </a>
           </div>
 
           {/* STATS LADO DERECHO */}
-          <div className="space-y-6">
-            <div className="flex items-center justify-between pb-6 border-b-2 border-amber-200">
-              <div>
-                <p className="text-5xl font-serif font-black text-slate-900 mb-1"><CountUpNumber end={850} />+</p>
-                <p className="text-sm text-slate-600 font-medium">Casos ganados</p>
+          <div className="space-y-4 sm:space-y-6 mt-8 md:mt-0">
+            <div className="flex items-center justify-between pb-4 sm:pb-6 border-b-2 border-amber-200 gap-4">
+              <div className="flex-1">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-slate-900 mb-1"><CountUpNumber end={850} />+</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium">Casos ganados</p>
               </div>
-              <Scale className="text-amber-700" size={36} />
+              <Scale className="text-amber-700 flex-shrink-0" size={28} />
             </div>
-            <div className="flex items-center justify-between pb-6 border-b-2 border-amber-200">
-              <div>
-                <p className="text-5xl font-serif font-black text-slate-900 mb-1"><CountUpNumber end={14} />+</p>
-                <p className="text-sm text-slate-600 font-medium">Años de experiencia</p>
+            <div className="flex items-center justify-between pb-4 sm:pb-6 border-b-2 border-amber-200 gap-4">
+              <div className="flex-1">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-slate-900 mb-1"><CountUpNumber end={14} />+</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium">Años experiencia</p>
               </div>
-              <Award className="text-amber-700" size={36} />
+              <Award className="text-amber-700 flex-shrink-0" size={28} />
             </div>
-            <div className="flex items-center justify-between pb-6 border-b-2 border-amber-200">
-              <div>
-                <p className="text-5xl font-serif font-black text-slate-900 mb-1"><CountUpNumber end={98} />%</p>
-                <p className="text-sm text-slate-600 font-medium">Clientes retienen</p>
+            <div className="flex items-center justify-between pb-4 sm:pb-6 border-b-2 border-amber-200 gap-4">
+              <div className="flex-1">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-slate-900 mb-1"><CountUpNumber end={98} />%</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium">Clientes retienen</p>
               </div>
-              <TrendingUp className="text-amber-700" size={36} />
+              <TrendingUp className="text-amber-700 flex-shrink-0" size={28} />
             </div>
-            <div className="flex items-center justify-between pt-2">
-              <div>
-                <p className="text-5xl font-serif font-black text-slate-900 mb-1">450+</p>
-                <p className="text-sm text-slate-600 font-medium">Clientes activos</p>
+            <div className="flex items-center justify-between pt-2 gap-4">
+              <div className="flex-1">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-black text-slate-900 mb-1">450+</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium">Clientes activos</p>
               </div>
-              <Users className="text-amber-700" size={36} />
+              <Users className="text-amber-700 flex-shrink-0" size={28} />
             </div>
           </div>
         </div>
       </section>
 
       {/* ÁREAS DE PRÁCTICA */}
-      <section className="px-6 md:px-10 py-32 max-w-7xl mx-auto border-b border-amber-100">
-        <h2 className="text-6xl font-serif font-black mb-4">Áreas de práctica</h2>
-        <p className="text-lg text-slate-600 mb-16 font-light">Especialización en todas las ramas del derecho</p>
+      <section className="px-4 sm:px-6 md:px-10 py-16 sm:py-24 md:py-32 max-w-7xl mx-auto border-b border-amber-100">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black mb-3 sm:mb-4">Áreas de práctica</h2>
+        <p className="text-sm sm:text-base md:text-lg text-slate-600 mb-10 sm:mb-16 font-light">Especialización en todas las ramas del derecho</p>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {[
             { icon: Scale, title: "Derecho Civil", items: ["Contratos", "Responsabilidad", "Familia"] },
             { icon: Briefcase, title: "Derecho Empresarial", items: ["Constitución", "Fusiones", "Adquisiciones"] },
@@ -108,13 +108,13 @@ function LegalDemo() {
           ].map((area, i) => {
             const Icon = area.icon
             return (
-              <div key={i} className="border border-amber-200 p-8">
-                <Icon className="text-amber-700 mb-4" size={32} />
-                <h3 className="text-xl font-serif font-bold mb-4">{area.title}</h3>
-                <ul className="space-y-2">
+              <div key={i} className="border border-amber-200 p-4 sm:p-6 md:p-8">
+                <Icon className="text-amber-700 mb-3 sm:mb-4" size={28} />
+                <h3 className="text-lg sm:text-xl font-serif font-bold mb-3 sm:mb-4">{area.title}</h3>
+                <ul className="space-y-1.5 sm:space-y-2">
                   {area.items.map((item, j) => (
-                    <li key={j} className="text-sm text-slate-600 flex items-center gap-2">
-                      <div className="w-1 h-1 bg-amber-700" />
+                    <li key={j} className="text-xs sm:text-sm text-slate-600 flex items-center gap-2">
+                      <div className="w-1 h-1 bg-amber-700 flex-shrink-0" />
                       {item}
                     </li>
                   ))}

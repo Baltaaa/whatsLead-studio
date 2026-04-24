@@ -14,37 +14,37 @@ function Plan({ name, price, featured, items, note, index }) {
       whileHover={{
         y: -6
       }}
-      className={`rounded-3xl p-8 border transition relative overflow-hidden ${
+      className={`rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 border transition relative overflow-hidden ${
         featured
           ? "border-white bg-white text-black"
           : "border-white/10 bg-zinc-900 text-white"
       }`}
     >
       {featured && (
-        <div className="absolute top-4 right-4 text-xs font-semibold uppercase tracking-widest bg-[#6fffe9]/40 opacity-90 py-1 px-5 rounded-2xl">
+        <div className="absolute top-3 sm:top-4 right-3 sm:right-4 text-xs font-semibold uppercase tracking-widest bg-[#6fffe9] opacity-90 py-1 px-3 sm:px-5 rounded-full sm:rounded-2xl">
           Recomendado
         </div>
       )}
 
-      <h4 className="text-2xl font-bold">{name}</h4>
+      <h4 className="text-lg sm:text-xl md:text-2xl font-bold">{name}</h4>
 
-      <p className="mt-4 text-5xl font-bold">{price}</p>
+      <p className="mt-3 sm:mt-4 text-3xl sm:text-4xl md:text-5xl font-bold">{price}</p>
 
-      <p className={`mt-2 ${featured ? "text-black/70" : "text-zinc-500"}`}>
+      <p className={`mt-1 sm:mt-2 text-xs sm:text-sm ${featured ? "text-black/70" : "text-zinc-500"}`}>
         Pago único
       </p>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-6 sm:mt-8 space-y-2 sm:space-y-4">
         {items.map((item, i) => (
-          <div key={i} className="flex gap-3 items-start">
-            <Check size={18} className="mt-1 shrink-0" />
-            <span>{item}</span>
+          <div key={i} className="flex gap-2 sm:gap-3 items-start">
+            <Check size={18} className="mt-0.5 shrink-0" />
+            <span className="text-sm sm:text-base">{item}</span>
           </div>
         ))}
       </div>
 
       <p
-        className={`mt-8 text-sm ${
+        className={`mt-6 sm:mt-8 text-xs sm:text-sm ${
           featured ? "text-black/70" : "text-zinc-500"
         }`}
       >
@@ -53,7 +53,7 @@ function Plan({ name, price, featured, items, note, index }) {
 
       <a
         href="#contacto"
-        className={`mt-8 block text-center rounded-full px-6 py-4 font-semibold transition ${
+        className={`mt-6 sm:mt-8 block text-center rounded-full px-4 sm:px-6 py-3 sm:py-4 font-semibold transition text-sm sm:text-base ${
           featured
             ? "bg-black text-white hover:bg-zinc-800"
             : "bg-white text-black hover:scale-105"
@@ -67,15 +67,15 @@ function Plan({ name, price, featured, items, note, index }) {
 
 function Pricing() {
   return (
-    <section id="precios" className="py-24 px-5 md:px-10">
+    <section id="precios" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
 
-        <div className="mb-12">
-          <p className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-3">
+        <div className="mb-10 sm:mb-12 md:mb-12">
+          <p className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-2 sm:mb-3">
             Pricing
           </p>
 
-          <h3 className="text-4xl md:text-6xl font-bold tracking-tight max-w-4xl">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl">
             Soluciones pensadas para vender más.
           </h3>
 

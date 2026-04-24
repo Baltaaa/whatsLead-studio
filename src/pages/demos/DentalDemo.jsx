@@ -43,75 +43,75 @@ function DentalDemo() {
     <div className="bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-950 text-white min-h-screen">
       {/* NAVBAR NEON */}
       <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-cyan-500/30">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
-          <div className="text-2xl font-black tracking-wider">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-4 flex justify-between items-center">
+          <div className="text-lg sm:text-2xl font-black tracking-wider">
             <span className="text-cyan-400">N</span>OVA
           </div>
-          <a href="https://wa.me/542236690101" className="px-6 py-2 bg-cyan-500 text-black rounded-md font-bold text-sm hover:bg-cyan-400 transition">
+          <a href="https://wa.me/542236690101" className="px-4 sm:px-6 py-2 bg-cyan-500 text-black rounded-md font-bold text-xs sm:text-sm hover:bg-cyan-400 transition">
             Solicitar
           </a>
         </div>
       </nav>
 
       {/* HERO GEOMÉTRICO */}
-      <section className="relative px-6 md:px-10 py-32 max-w-7xl mx-auto overflow-hidden">
+      <section className="relative px-4 sm:px-6 md:px-10 py-16 sm:py-24 md:py-32 max-w-7xl mx-auto overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-20 -left-40 w-96 h-96 bg-cyan-600/5 rounded-full blur-3xl pointer-events-none" />
         
-        <div className="grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
           <div>
-            <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg mb-6">
-              <p className="text-sm font-bold text-cyan-300 tracking-widest">CLÍNICA DENTAL</p>
+            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 border border-cyan-500/50 rounded-lg mb-4 sm:mb-6">
+              <p className="text-xs sm:text-sm font-bold text-cyan-300 tracking-widest">CLÍNICA DENTAL</p>
             </div>
-            <h1 className="text-7xl md:text-8xl font-black leading-tight mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-cyan-400">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-6 sm:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-cyan-400">
               Sonreír es nuestro trabajo.
             </h1>
-            <p className="text-lg text-cyan-100/70 mb-10 leading-relaxed max-w-lg font-light">
+            <p className="text-sm sm:text-base md:text-lg text-cyan-100/70 mb-8 sm:mb-10 leading-relaxed max-w-lg font-light">
               Tecnología CAD/CAM, implantes con carga inmediata y orthodoxia invisible. Resultados que duran.
             </p>
-            <a href="https://wa.me/542236690101" className="inline-flex px-8 py-4 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition group">
-              Reservar ahora <ArrowRight className="ml-2 group-hover:translate-x-1 transition" size={20} />
+            <a href="https://wa.me/542236690101" className="inline-flex px-6 sm:px-8 py-2.5 sm:py-4 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition group text-sm sm:text-base">
+              Reservar ahora <ArrowRight className="ml-2 group-hover:translate-x-1 transition" size={18} />
             </a>
           </div>
 
           {/* STATS DERECHA */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-6 rounded-xl hover:border-cyan-400/60 transition">
-              <div className="text-4xl font-black text-cyan-300 mb-2"><CountUpNumber end={540} />+</div>
-              <p className="text-sm text-cyan-200 font-medium">Pacientes</p>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-8 md:mt-0">
+            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-4 sm:p-6 rounded-lg sm:rounded-xl hover:border-cyan-400/60 transition">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-300 mb-1 sm:mb-2"><CountUpNumber end={540} />+</div>
+              <p className="text-xs sm:text-sm text-cyan-200 font-medium">Pacientes</p>
             </div>
-            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-6 rounded-xl hover:border-cyan-400/60 transition">
-              <div className="text-4xl font-black text-cyan-300 mb-2"><CountUpNumber end={18} />+</div>
-              <p className="text-sm text-cyan-200 font-medium">Años exp</p>
+            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-4 sm:p-6 rounded-lg sm:rounded-xl hover:border-cyan-400/60 transition">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-300 mb-1 sm:mb-2"><CountUpNumber end={18} />+</div>
+              <p className="text-xs sm:text-sm text-cyan-200 font-medium">Años</p>
             </div>
-            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-6 rounded-xl hover:border-cyan-400/60 transition">
-              <div className="text-4xl font-black text-cyan-300 mb-2"><CountUpNumber end={99} />%</div>
-              <p className="text-sm text-cyan-200 font-medium">Satisfacción</p>
+            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-4 sm:p-6 rounded-lg sm:rounded-xl hover:border-cyan-400/60 transition">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-300 mb-1 sm:mb-2"><CountUpNumber end={99} />%</div>
+              <p className="text-xs sm:text-sm text-cyan-200 font-medium">Satisfacción</p>
             </div>
-            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-6 rounded-xl hover:border-cyan-400/60 transition">
-              <div className="text-4xl font-black text-cyan-300 mb-2">10<span className="text-sm">+</span></div>
-              <p className="text-sm text-cyan-200 font-medium">Años Gtía</p>
+            <div className="group bg-gradient-to-br from-cyan-500/20 to-cyan-600/5 border border-cyan-500/30 p-4 sm:p-6 rounded-lg sm:rounded-xl hover:border-cyan-400/60 transition">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-300 mb-1 sm:mb-2">10+</div>
+              <p className="text-xs sm:text-sm text-cyan-200 font-medium">Garantía</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* TRATAMIENTOS GRID */}
-      <section className="px-6 md:px-10 py-24 max-w-7xl mx-auto">
-        <h2 className="text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-white">Tratamientos</h2>
-        <p className="text-cyan-200/60 mb-16 text-lg font-light">Tecnología de punta para sonrisas perfectas</p>
+      <section className="px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24 max-w-7xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-3 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-white">Tratamientos</h2>
+        <p className="text-cyan-200/60 mb-10 sm:mb-16 text-sm sm:text-base md:text-lg font-light">Tecnología de punta para sonrisas perfectas</p>
         
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
           {treatments.map((t, i) => {
             const Icon = t.icon
             return (
-              <div key={i} className="group relative bg-gradient-to-br from-cyan-500/10 to-slate-900 border border-cyan-500/20 p-6 rounded-lg hover:border-cyan-400/50 transition overflow-hidden">
+              <div key={i} className="group relative bg-gradient-to-br from-cyan-500/10 to-slate-900 border border-cyan-500/20 p-4 sm:p-6 rounded-lg hover:border-cyan-400/50 transition overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/0 to-cyan-500/0 group-hover:from-cyan-500/5 group-hover:via-cyan-500/10 group-hover:to-cyan-500/0 transition" />
                 <div className="relative">
-                  <Icon className="text-cyan-400 mb-4" size={28} />
-                  <h3 className="text-xl font-black mb-1">{t.title}</h3>
-                  <p className="text-sm text-cyan-200/60 mb-4">{t.subtitle}</p>
-                  <p className="text-lg font-bold text-cyan-300">{t.price}</p>
+                  <Icon className="text-cyan-400 mb-3 sm:mb-4" size={24} />
+                  <h3 className="text-lg sm:text-xl font-black mb-1">{t.title}</h3>
+                  <p className="text-xs sm:text-sm text-cyan-200/60 mb-3 sm:mb-4">{t.subtitle}</p>
+                  <p className="text-base sm:text-lg font-bold text-cyan-300">{t.price}</p>
                 </div>
               </div>
             )

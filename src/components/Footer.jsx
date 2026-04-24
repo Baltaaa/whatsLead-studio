@@ -4,29 +4,29 @@ import Logo from "./Logo"
 
 function Footer() {
   return (
-    <footer className="px-5 md:px-10 pb-10 pt-20">
-      <div className="max-w-7xl mx-auto border-t border-white/10 pt-10">
+    <footer className="px-4 sm:px-6 md:px-10 pb-6 sm:pb-10 pt-12 sm:pt-20">
+      <div className="max-w-7xl mx-auto border-t border-white/10 pt-6 sm:pt-10">
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
 
           {/* Brand */}
-          <div className="flex flex-col gap-4 my-0 py-0">
+          <div className="flex flex-col gap-3 sm:gap-4 my-0 py-0">
             <Logo />
 
-            <p className=" text-zinc-500 max-w-sm leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-500 max-w-sm leading-relaxed">
               Landing pages modernas diseñadas para generar clientes reales.
             </p>
 
-            <h3 className="mt-4 text-white/50 max-w-sm uppercase font-normal tracking-wide font-mono">
+            <h3 className="mt-2 sm:mt-4 text-white/50 max-w-sm uppercase font-normal tracking-wide font-mono text-xs sm:text-sm">
               Mar del Plata, Argentina
             </h3>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4">Navegación</h4>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Navegación</h4>
 
-            <div className="flex flex-col gap-3 text-zinc-400">
+            <div className="flex flex-col gap-2 sm:gap-3 text-zinc-400 text-sm sm:text-base">
               <a href="#servicios" className="hover:text-white transition">
                 Servicios
               </a>
@@ -49,9 +49,9 @@ function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Legal</h4>
 
-            <div className="flex flex-col gap-3 text-zinc-400">
+            <div className="flex flex-col gap-2 sm:gap-3 text-zinc-400 text-sm sm:text-base">
               <a href="#terms" className="hover:text-white transition">
                 Terminos y Condiciones
               </a>

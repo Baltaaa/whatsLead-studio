@@ -21,7 +21,7 @@ function Navbar() {
           : "bg-transparent py-4"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between">
 
 
         <Logo />
@@ -47,7 +47,7 @@ function Navbar() {
 
         <a
           href="#onboarding"
-          className="hidden md:block m-2 px-5 py-2 rounded-full bg-white text-black font-medium hover:scale-105 transition"
+          className="hidden md:block m-2 px-4 sm:px-5 py-2 rounded-full bg-white text-black font-medium text-sm hover:scale-105 transition"
         >
           Onboarding
         </a>
