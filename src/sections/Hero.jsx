@@ -49,7 +49,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-3 sm:mb-5"
+            className="uppercase tracking-[0.28em] text-xs text-zinc-500 mb-3 sm:mb-5 hidden md:flex"
           >
             WhatsLead Studio
           </motion.p>
