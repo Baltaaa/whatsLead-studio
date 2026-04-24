@@ -1,5 +1,32 @@
 import { motion } from "framer-motion"
-import { ArrowRight, Zap, Users, TrendingUp, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Zap, Users, TrendingUp, CheckCircle2, Rocket, Clock, Smile, Building2 } from "lucide-react"
+import { useState, useRef } from "react"
+
+function CountUpNumber({ end, duration = 1500 }) {
+  const [count, setCount] = useState(0)
+  const hasStarted = useRef(false)
+
+  const onVisible = (el) => {
+    if (!el || hasStarted.current) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        hasStarted.current = true
+        const startTime = Date.now()
+        const animate = () => {
+          const elapsed = Date.now() - startTime
+          const progress = Math.min(elapsed / duration, 1)
+          setCount(Math.floor(progress * end))
+          if (progress < 1) requestAnimationFrame(animate)
+        }
+        animate()
+        observer.disconnect()
+      }
+    }, { threshold: 0.1 })
+    observer.observe(el)
+  }
+
+  return <span ref={onVisible}>{count}</span>
+}
 
 function Hero() {
   return (
@@ -18,7 +45,7 @@ function Hero() {
         {/* Left */}
         <div>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -27,16 +54,24 @@ function Hero() {
             WhatsLead Studio
           </motion.p>
 
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight text-white"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight text-[#E8E8E8]"
           >
-            Landings que venden. <b className="text-[#6fffe9] font-extrabold">Ya.</b>
+            Landings que venden.{" "}
+            <b
+              className="font-black text-white relative inline-block -translate-y-[1px]"
+              style={{
+                textShadow: "0 0 16px rgba(255,255,255,0.12)",
+              }}
+            >
+              Ya.
+            </b>
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -46,7 +81,7 @@ function Hero() {
           </motion.p>
 
           {/* Trust Signals Row */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -67,7 +102,7 @@ function Hero() {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -94,7 +129,7 @@ function Hero() {
           </motion.div>
 
           {/* Guarantee */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -106,7 +141,7 @@ function Hero() {
         </div>
 
         {/* Right - Stats Box */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -116,38 +151,50 @@ function Hero() {
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-zinc-900/80 to-black p-8 shadow-2xl space-y-6">
 
             {/* Stat 1 */}
-            <div className="border-b border-white/10 pb-6">
-              <p className="text-xs text-zinc-500 mb-2">Promedio de Conversión</p>
-              <motion.p 
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-5xl font-bold text-white"
-              >
-                +156%
-              </motion.p>
-              <p className="text-sm text-zinc-400 mt-1">Más leads que antes</p>
+            <div className="border-b border-white/10 pb-6 flex justify-between items-start">
+              <div className="flex-1">
+                <p className="text-xs text-zinc-500 mb-2">Promedio de Conversión</p>
+                <motion.p
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="text-5xl font-bold text-white"
+                >
+                  +<CountUpNumber end={156} />%
+                </motion.p>
+                <p className="text-sm text-zinc-400 mt-1">Más leads que antes</p>
+              </div>
+              <Rocket className="text-emerald-400 mt-2" size={32} />
             </div>
 
             {/* Stat 2 */}
-            <div className="border-b border-white/10 pb-6">
-              <p className="text-xs text-zinc-500 mb-2">Tiempo de Entrega</p>
-              <p className="text-4xl font-bold text-white">48-72h</p>
-              <p className="text-sm text-zinc-400 mt-1">Tu landing lista para vender</p>
+            <div className="border-b border-white/10 pb-6 flex justify-between items-start">
+              <div className="flex-1">
+                <p className="text-xs text-zinc-500 mb-2">Tiempo de Entrega</p>
+                <p className="text-4xl font-bold text-white">48-72h</p>
+                <p className="text-sm text-zinc-400 mt-1">Tu landing lista para vender</p>
+              </div>
+              <Clock className="text-cyan-400 mt-2" size={32} />
             </div>
 
             {/* Stat 3 */}
-            <div className="border-b border-white/10 pb-6">
-              <p className="text-xs text-zinc-500 mb-2">Tasa de Satisfacción</p>
-              <p className="text-4xl font-bold text-white">94%</p>
-              <p className="text-sm text-zinc-400 mt-1">Clientes que vuelven</p>
+            <div className="border-b border-white/10 pb-6 flex justify-between items-start">
+              <div className="flex-1">
+                <p className="text-xs text-zinc-500 mb-2">Tasa de Satisfacción</p>
+                <p className="text-4xl font-bold text-white"><CountUpNumber end={94} />%</p>
+                <p className="text-sm text-zinc-400 mt-1">Clientes que vuelven</p>
+              </div>
+              <Smile className="text-amber-400 mt-2" size={32} />
             </div>
 
             {/* Stat 4 */}
-            <div>
-              <p className="text-xs text-zinc-500 mb-2">Empresas Confían</p>
-              <p className="text-4xl font-bold text-white">30+</p>
-              <p className="text-sm text-zinc-400 mt-1">Desde CABA hasta provincias</p>
+            <div className="flex justify-between items-start">
+              <div className="flex-1">
+                <p className="text-xs text-zinc-500 mb-2">Empresas Confían</p>
+                <p className="text-4xl font-bold text-white"><CountUpNumber end={30} />+</p>
+                <p className="text-sm text-zinc-400 mt-1">Desde CABA hasta provincias</p>
+              </div>
+              <Building2 className="text-violet-400 mt-2" size={32} />
             </div>
 
             {/* Badge */}

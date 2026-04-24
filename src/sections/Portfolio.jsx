@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import DemoGrid from '../components/DemoGrid'
 
 const portfolioItems = [
   {
@@ -193,6 +194,9 @@ function Portfolio() {
           </a>
         </motion.div>
       </div>
+
+      {/* DEMO GRID SECTION */}
+      <DemoGrid />
     </section>
   )
 }
