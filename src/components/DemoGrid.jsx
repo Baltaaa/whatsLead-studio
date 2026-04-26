@@ -67,7 +67,7 @@ function DemoCard({ demo, index }) {
       {/* Header con fondo gradient */}
       <div className={`relative h-24 sm:h-28 md:h-32 bg-gradient-to-r ${demo.gradient} border-b border-white/10 p-3 sm:p-4 md:p-6 flex items-end`}>
         <div className="flex items-end gap-2 sm:gap-3 md:gap-4 w-full">
-          <div className={`p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl md:rounded-2xl bg-${demo.colorClass}/20 border border-${demo.colorClass}/30 flex-shrink-0`}>
+          <div className={`p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl md:rounded-2xl bg-${demo.colorClass}/20  border-${demo.colorClass}/30 flex-shrink-0`}>
             <Icon size={20} className={`text-${demo.colorClass}`} />
           </div>
           <div className="min-w-0 flex-1">
@@ -103,7 +103,7 @@ function DemoCard({ demo, index }) {
 
         {/* CTA */}
         <div className="flex items-center justify-between pt-2 sm:pt-3 md:pt-4 gap-2">
-          <span className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-${demo.colorClass}/10 border border-${demo.colorClass}/30 text-xs font-semibold text-${demo.colorClass} whitespace-nowrap`}>
+          <span className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-${demo.colorClass}/10 border-${demo.colorClass}/30 text-xs font-semibold text-${demo.colorClass} whitespace-nowrap`}>
             Ver demo
           </span>
           <ArrowRight size={16} className={`text-zinc-600 group-hover:text-${demo.colorClass} transition-colors flex-shrink-0`} />
@@ -143,35 +143,7 @@ function DemoGrid() {
           ))}
         </div>
 
-        {/* Insight section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-12 sm:mt-16 md:mt-20 rounded-lg sm:rounded-xl md:rounded-2xl border border-white/10 bg-gradient-to-r from-zinc-900 to-black p-4 sm:p-6 md:p-8 lg:p-12"
-        >
-          <h3 className="text-2xl sm:text-3xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
-            Cada demo es diferente. Por qué.
-          </h3>
-          <p className="text-sm sm:text-base md:text-lg text-zinc-400 mb-6 leading-relaxed">
-            No creemos en templates estáticos. Cada negocio es único y necesita un diseño que refleje su identidad. La demo de Beauty tiene un estilo minimalista y elegant, la de Dental es más modern y tech, y la de Legal es corporativa y profesional. Así es como trabajamos: cada cliente recibe un diseño pensado para su rubro específico.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-8">
-            <div className="rounded-lg sm:rounded-lg md:rounded-xl border border-pink-300/20 bg-pink-300/5 p-3 sm:p-4 md:p-6">
-              <p className="font-bold text-pink-300 mb-1 sm:mb-2 text-sm sm:text-base">Beauty Studio</p>
-              <p className="text-xs sm:text-sm text-zinc-400">Estética minimalista, colores cálidos, foco en confianza y calidad.</p>
-            </div>
-            <div className="rounded-lg sm:rounded-lg md:rounded-xl border border-cyan-300/20 bg-cyan-300/5 p-3 sm:p-4 md:p-6">
-              <p className="font-bold text-cyan-300 mb-1 sm:mb-2 text-sm sm:text-base">Dental Care</p>
-              <p className="text-xs sm:text-sm text-zinc-400">Diseño moderno, tecnología visible, seguridad y profesionalismo.</p>
-            </div>
-            <div className="rounded-lg sm:rounded-lg md:rounded-xl border border-amber-300/20 bg-amber-300/5 p-3 sm:p-4 md:p-6">
-              <p className="font-bold text-amber-300 mb-1 sm:mb-2 text-sm sm:text-base">Legal Firm</p>
-              <p className="text-xs sm:text-sm text-zinc-400">Corporativo, serio, confiable. Énfasis en experiencia y resultados.</p>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

@@ -93,7 +93,7 @@ function Pricing() {
             price="USD 99"
             note="Ideal para emprendimientos que necesitan presencia profesional inmediata."
             items={[
-              "Landing page 1 sección",
+              "Landing page",
               "Diseño responsive",
               "Botón directo a WhatsApp",
               "Copy base vendedor",

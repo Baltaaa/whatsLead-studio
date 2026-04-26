@@ -58,9 +58,9 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight text-slate-100"
           >
-            Landings que venden. <b className="text-[#6fffe9] font-extrabold">Ya.</b>
+            Landings que venden. <b className="text-white font-extrabold">Ya.</b>
           </motion.h2>
 
           <motion.p 
