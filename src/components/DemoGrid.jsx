@@ -3,20 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Smile, Scale } from 'lucide-react'
 
 const demos = [
-  {
-    id: 'beauty',
-    title: 'Glow Beauty Studio',
-    category: 'Estética | Premium',
-    tagline: 'Tu mejor versión empieza hoy.',
-    description: 'Landing para salón de belleza con servicios premium, testimonios y sistema de reservas.',
-    icon: Sparkles,
-    color: 'pink',
-    colorClass: 'pink-300',
-    gradient: 'from-pink-300/10 to-pink-600/20',
-    href: '/demo/beauty',
-    features: ['+320 clientas', '10+ años', '98% satisfacción'],
-    preview: '/portfolio-1.jpg'
-  },
+  
   {
     id: 'dental',
     title: 'Nova Dental Care',
@@ -32,6 +19,20 @@ const demos = [
     preview: '/portfolio-2.jpg'
   },
   {
+    id: 'beauty',
+    title: 'Glow Beauty Studio',
+    category: 'Estética | Premium',
+    tagline: 'Tu mejor versión empieza hoy.',
+    description: 'Landing para salón de belleza con servicios premium, testimonios y sistema de reservas.',
+    icon: Sparkles,
+    color: 'pink',
+    colorClass: 'pink-200',
+    gradient: 'from-pink-300/10 to-pink-600/20',
+    href: '/demo/beauty',
+    features: ['+320 clientas', '10+ años', '98% satisfacción'],
+    preview: '/portfolio-1.jpg'
+  },
+  {
     id: 'legal',
     title: 'Lexis Legal Firm',
     category: 'Asesoramiento | Corporativo',
@@ -39,7 +40,7 @@ const demos = [
     description: 'Estudio jurídico especializado en derecho civil, empresarial, laboral y penal.',
     icon: Scale,
     color: 'amber',
-    colorClass: 'amber-300',
+    colorClass: 'amber-400',
     gradient: 'from-amber-300/10 to-amber-600/20',
     href: '/demo/legal',
     features: ['+850 casos ganados', '14+ años', '98% clientes retienen'],
@@ -62,12 +63,12 @@ function DemoCard({ demo, index }) {
       viewport={{ once: true }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group block rounded-3xl overflow-hidden border border-white/10 bg-zinc-900/50 hover:border-white/30 transition-all duration-300 h-full flex flex-col cursor-pointer"
+      className="group  rounded-3xl overflow-hidden border border-white/10 bg-zinc-900/50 hover:border-white/30 transition-all duration-300 h-full flex flex-col cursor-pointer"
     >
       {/* Header con fondo gradient */}
       <div className={`relative h-24 sm:h-28 md:h-32 bg-gradient-to-r ${demo.gradient} border-b border-white/10 p-3 sm:p-4 md:p-6 flex items-end`}>
         <div className="flex items-end gap-2 sm:gap-3 md:gap-4 w-full">
-          <div className={`p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl md:rounded-2xl bg-${demo.colorClass}/20  border-${demo.colorClass}/30 flex-shrink-0`}>
+          <div className={`p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl md:rounded-2xl bg-${demo.colorClass}/20  flex-shrink-0`}>
             <Icon size={20} className={`text-${demo.colorClass}`} />
           </div>
           <div className="min-w-0 flex-1">
